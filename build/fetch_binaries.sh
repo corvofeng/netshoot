@@ -19,7 +19,7 @@ case $ARCH in
 esac
 
 get_ctop() {
-  VERSION=$(get_latest_release bcicen/ctop | sed -e 's/^v//')
+  VERSION=$(get_latest_release bcicen/ctop)
   LINK="https://github.com/bcicen/ctop/releases/download/${VERSION}/ctop-${VERSION}-linux-${ARCH}"
   wget "$LINK" -O /tmp/ctop && chmod +x /tmp/ctop
 }
